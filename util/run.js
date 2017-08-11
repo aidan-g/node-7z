@@ -73,7 +73,7 @@ module.exports = function (command, switches) {
     // of the stdout create an new error with the 7-Zip error message as the
     // error's message. Otherwise progress with stdout message.
     var err;
-    var reg = new RegExp('Error:' + os.EOL + '?(.*)', 'g');
+    var reg = new RegExp('Error:\s?(?:' + os.EOL + ')?\s?(.*)', 'g');
     var res = {
       cmd: cmd,
       args: args,
